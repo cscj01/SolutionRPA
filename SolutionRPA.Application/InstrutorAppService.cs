@@ -1,7 +1,7 @@
-﻿using SolutionRPA.Application.Interface;
+﻿using System.Collections.Generic;
 using SolutionRPA.Domain.Entities;
+using SolutionRPA.Application.Interface;
 using SolutionRPA.Domain.Interfaces.Services;
-using System.Collections.Generic;
 
 namespace SolutionRPA.Application
 {   

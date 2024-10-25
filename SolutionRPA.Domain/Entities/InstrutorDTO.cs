@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SolutionRPA.Domain.Entities
 {
-    [Table("Instrutor")]
+    [Table("TB_Instrutor")]
     public class InstrutorDTO
     {
         public int InstrutorId { get; set; }

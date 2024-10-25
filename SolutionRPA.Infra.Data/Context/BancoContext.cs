@@ -2,16 +2,23 @@
 using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using SolutionRPA.Domain.Entities;
 using SolutionRPA.Infra.Data.EntityConfig;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SolutionRPA.Infra.Data.Context
 {
     public class BancoContext : DbContext
     {
-        public BancoContext() : base("name=BancoContext") { }
+        public BancoContext() : base("name=BancoContext") 
+        {
+            Database.SetInitializer(new CreateDatabaseIfNotExists<BancoContext>());
+            Database.Initialize(true);
+        }
 
         public DbSet<CursoDTO> Cursos { get; set; }
         public DbSet<InstrutorDTO> Instrutores { get; set; }

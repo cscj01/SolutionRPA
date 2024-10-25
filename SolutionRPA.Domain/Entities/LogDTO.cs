@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SolutionRPA.Domain.Entities
 {
-    [Table("Log")]
+    [Table("TB_Log")]
     public class LogDTO
     {
         public int LogId { get; set; }
